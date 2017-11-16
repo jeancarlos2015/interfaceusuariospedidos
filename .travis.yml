@@ -8,7 +8,7 @@ jdk:
 
 addons:
   sonarcloud:
-    organization: "interfaceusuario"
+    organization: "interfacegerente"
     token:
       secure: "$SONAR_KEY_INTERFACE"
 script:
