@@ -9,14 +9,14 @@ $(document).ready(function()
 	var title=$('.myimage').attr('title');
 	var li =$('.staff').find('img');
 	
-	$('.myimage').css({opacity:1,});
+	$('.myimage').css({opacity:1});
 	
 	/* to change the border on focusing on the form elements */
    $('#bookonline').find('input').focusin(function(){
 	   
-	   $(this).css({'color':'#ffffff',});
+	   $(this).css({'color':'#ffffff'});
 	   
-	   })
+	   });
 	   
 	    $('bookonline').find('input').focusout(function(){
 	   
@@ -27,7 +27,7 @@ $(document).ready(function()
 		   
 		   });
 	   
-	   })
+	   });
 	   
 	   /* to change the pop up image on clicking */
 	   
@@ -36,49 +36,47 @@ $(document).ready(function()
 		   
 		  
 			   
-			 $('.firstpop').animate({ opacity:1,},500);
-			  $('.secondpop').animate({ opacity:0,},500);
-			  $('.thirdpop').animate({ opacity:0,},500);
-			   $('.fourthpop').animate({ opacity:0,},500);
-			     $('.fifthpop').animate({ opacity:0,},500);
-			   	$('.sixthpop').animate({ opacity:0,},500);
-				$('.seventhpop').animate({ opacity:0,},500);
+			 $('.firstpop').animate({ opacity:1},500);
+			  $('.secondpop').animate({ opacity:0},500);
+			  $('.thirdpop').animate({ opacity:0},500);
+			   $('.fourthpop').animate({ opacity:0},500);
+			     $('.fifthpop').animate({ opacity:0},500);
+			   	$('.sixthpop').animate({ opacity:0},500);
+				$('.seventhpop').animate({ opacity:0},500);
 		   
-		   }) 
+		   }); 
 		   
 		   
 		   
 		    $('.myimage2').click(function(){
 		   
-		  
-			   $(this).animate({opacity:1,}).siblings().css({opacity:0.6,});
-			 $('.firstpop').animate({ opacity:0,},500);
-			  $('.secondpop').animate({ opacity:1,},500);
-			   $('.thirdpop').animate({ opacity:0,},500);
-			   $('.fourthpop').animate({ opacity:0,},500);
-			     $('.fifthpop').animate({ opacity:0,},500);
-			   	$('.sixthpop').animate({ opacity:0,},500);
-				$('.seventhpop').animate({ opacity:0,},500);
+		  $('.firstpop').animate({ opacity:1},500);
+			  $('.secondpop').animate({ opacity:0},500);
+			  $('.thirdpop').animate({ opacity:0},500);
+			   $('.fourthpop').animate({ opacity:0},500);
+			     $('.fifthpop').animate({ opacity:0},500);
+			   	$('.sixthpop').animate({ opacity:0},500);
+				$('.seventhpop').animate({ opacity:0},500);
 			   
 		   
-		   }) 
+		   }) ;
 		   
 		   
 		   
 		    $('.myimage3').click(function(){
 		   
 		  
-			   $(this).animate({opacity:1,}).siblings().css({opacity:0.6,});
-			 $('.firstpop').animate({ opacity:0,},500);
-			  $('.secondpop').animate({ opacity:0,},500);
-			   $('.thirdpop').animate({ opacity:1,},500);
-			   $('.fourthpop').animate({ opacity:0,},500);
-			     $('.fifthpop').animate({ opacity:0,},500);
-			   	$('.sixthpop').animate({ opacity:0,},500);
-				$('.seventhpop').animate({ opacity:0,},500);
+			   $(this).animate({opacity:1}).siblings().css({opacity:0.6});
+			 $('.firstpop').animate({ opacity:1},500);
+			  $('.secondpop').animate({ opacity:0},500);
+			  $('.thirdpop').animate({ opacity:0},500);
+			   $('.fourthpop').animate({ opacity:0},500);
+			     $('.fifthpop').animate({ opacity:0},500);
+			   	$('.sixthpop').animate({ opacity:0},500);
+				$('.seventhpop').animate({ opacity:0},500);
 			   
 		   
-		   }) 
+		   }); 
 		   
 		   $('.myimage4').click(function(){
 		   
