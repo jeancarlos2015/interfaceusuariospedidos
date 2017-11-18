@@ -19,9 +19,9 @@ angular.module('appProdutos', [])
             };
             
              $scope.produtos1 = [];
-            $scope.nome={};
+            //$scope.nome1={};
             $scope.listarProdutosNome = function () {
-                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar',$scope.nome).
+                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar',$scope.nome1).
                         then(function (response) {
                             $scope.produtos1 = response.data;
                            
