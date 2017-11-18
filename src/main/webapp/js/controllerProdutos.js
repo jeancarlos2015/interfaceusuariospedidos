@@ -19,7 +19,7 @@ angular.module('appProdutos', [])
             };
             
              $scope.produtos1 = [];
-            //$scope.nome1={};
+            $scope.nome1="";
             $scope.listarProdutosNome = function () {
                 $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar',$scope.nome1).
                         then(function (response) {
