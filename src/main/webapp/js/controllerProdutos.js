@@ -17,14 +17,14 @@ angular.module('appProdutos', [])
                             $scope.produtos = response.data;
                         });
             };
-            
-             $scope.produtos1 = [];
-            $scope.nome1="";
+
+            $scope.produtos1 = [];
+            $scope.nome1 = "";
             $scope.listarProdutosNome = function () {
-                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar',$scope.nome1).
+                
+                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar/'+$scope.nome1).
                         then(function (response) {
                             $scope.produtos1 = response.data;
-                           
                         });
             };
         });
