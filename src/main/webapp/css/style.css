@@ -279,6 +279,9 @@ float:left; margin-left:45px;}
 .fifthpop{position:relative; left:490px; top:-108px;  z-index:900; opacity:0; }
 .sixthpop{position:relative; left:0px; top:-108px;  z-index:900; opacity:0; }
 
+.corpreto h1, h2, h3{
+    color:#0a131f;
+}
  
 /************************ FOOTER *****************************/
 .footerwrapper{height:530px; background:#252b33; margin-top:-50px; border-top:4px solid #a8aaad;}

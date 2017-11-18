@@ -14,6 +14,7 @@ angular.module('appCliente', [])
             };
 
 
+
             $scope.produto = {};
             $scope.salvarProduto = function () {
                 $http.post('https://servicocontrolepedidos.herokuapp.com/produto', $scope.produto).
@@ -29,10 +30,19 @@ angular.module('appCliente', [])
                 $http.get('https://servicocontrolepedidos.herokuapp.com/produto/size/3').
                         then(function (response) {
                             $scope.produtos = response.data;
-                           
+
                         });
             };
 
+            $scope.produtos = [];
+            $scope.nome = {};
+            $scope.listarProdutosNome = function () {
+                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar/', $scope.nome).
+                        then(function (response) {
+                            $scope.produtos = response.data;
+
+                        });
+            };
 
 
         });

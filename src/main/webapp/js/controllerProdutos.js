@@ -17,4 +17,14 @@ angular.module('appProdutos', [])
                             $scope.produtos = response.data;
                         });
             };
+            
+             $scope.produtos1 = [];
+            $scope.nome={};
+            $scope.listarProdutosNome = function () {
+                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar',$scope.nome).
+                        then(function (response) {
+                            $scope.produtos1 = response.data;
+                           
+                        });
+            };
         });

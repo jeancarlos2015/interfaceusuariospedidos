@@ -49,8 +49,8 @@
             <div class="container" id="bookonline">
                 <h3 class="wow fadeInUp" data-wow-delay="0.3s"> ACESSE SUA CONTA AGORA</h3>
                 <form ng-click="autenticarUsuario()">
-                    <input type="text" class="name wow zoomIn" placeholder="Usuario" name="user" ng-model="usuarioautent.uname">
-                    <input type="password" class="name wow zoomIn" placeholder="Sua Senha" name="pass" ng-model="usuarioautent.pass">
+                    <input type="text" class="name wow zoomIn" placeholder="Usuario" name="user" ng-model="usuarioautent.uname" required>
+                    <input type="password" class="name wow zoomIn" placeholder="Sua Senha" name="pass" ng-model="usuarioautent.pass" required>
                     <button class="booknow wow fadeInUp"  > Entrar</button>
                     <br>
                     {{mensagemUsuario}}
