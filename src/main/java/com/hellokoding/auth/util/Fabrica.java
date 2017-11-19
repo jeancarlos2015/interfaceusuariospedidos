@@ -5,8 +5,7 @@
  */
 package com.hellokoding.auth.util;
 
-import com.hellokoding.auth.cdp.Cliente;
-import com.hellokoding.auth.cdp.Funcionario;
+
 import com.hellokoding.auth.cdp.User;
 
 
@@ -24,19 +23,12 @@ public class Fabrica {
      */
     public static Fabrica make(Tipo tipo) {
         switch (tipo) {
-            case FUNCIONARIO:
-                break;
-            case CLIENTE:
-                return new FabricaCliente();
-            case FORNECEDOR:
-                break;
             case USUARIO:
                 return new FabricaUsuario();
             default:
                 return new Fabrica();
 
         }
-        return new Fabrica();
     }
 
     //Metodo será sobrescrito pela fabricaUsuario
@@ -45,15 +37,5 @@ public class Fabrica {
     }
 
   
-
-    //Metodo será sobrescrito pela fabricaCliente
-    public Cliente criaCliente() {
-        throw new UnsupportedOperationException();
-    }
-
-    //Metodo será sobrescrito pela fabricaFuncionário
-    public Funcionario criaFuncionario() {
-        throw new UnsupportedOperationException();
-    }
 
 }
