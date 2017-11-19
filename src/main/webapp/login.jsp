@@ -34,9 +34,9 @@
                 <div class="logo"> <a href="#"><img src="resources/images/LOGO.png" alt="logo" width="165" height="74"></a> </div> <!--end of Logo-->
                 <nav>
                     <ul id="navigations">
-                        <li><a href="index.html">PRINCIPAL</a></li>
-                        <li> <a href="acesso.html">ACESSO</a></li>
-                        <li> <a href="produtos.html">PRODUTOS</a></li>
+                        <li><a href="https://interfacegerentefornecedor.herokuapp.com/index.html">PRINCIPAL</a></li>
+                        <li> <a href="login.jsp">ACESSO</a></li>
+                        <li> <a href="https://interfacegerentefornecedor.herokuapp.com/produtos.html">PRODUTOS</a></li>
                     </ul>
                 </nav>
             </div> <!--end of header-->
