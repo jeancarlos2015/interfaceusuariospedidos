@@ -18,10 +18,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
         <script src="resources/jswow.min.js" type="text/javascript"></script>
-         <script type="text/javascript" src="resources/js/MyJQ.js"></script>
+        <script type="text/javascript" src="resources/js/MyJQ.js"></script>
         <script src="resources/js/jquery.localScroll.min.js" type="text/javascript"></script>
         <script src="resources/js/jquery.scrollTo.min.js" type="text/javascript"></script> 
-        
+
         <script type="text/javascript" src="resources/js/scrollfunction.js"></script>
         <script type="text/javascript" src="resources/js/wow.min.js"></script>
         <script type="text/javascript" src="resources/js/init.js"></script>
@@ -76,8 +76,8 @@
         </div>
         <!-- /container -->
 
-        
-        
+
+
         <div class="footerwrapper">
             <footer class="container">
                 <div class="socialize">
@@ -99,7 +99,7 @@
 
         </div> <!-- end of footer-->
 
-         <div class="copyrightswrapper">
+        <div class="copyrightswrapper">
             <div id="copyrights" class="container">
 
                 <p>Copyright 2014 <a href="https://www.facebook.com/Mido.HHH"> Jean Carlos Penas </a> All Rights Reserved</p>

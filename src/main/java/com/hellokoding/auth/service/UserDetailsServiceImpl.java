@@ -1,8 +1,8 @@
-package com.hellokoding.auth.cgt;
+package com.hellokoding.auth.service;
 
-import com.hellokoding.auth.cdp.Role;
-import com.hellokoding.auth.cdp.User;
-import com.hellokoding.auth.cgd.UserRepository;
+import com.hellokoding.auth.model.Role;
+import com.hellokoding.auth.model.User;
+import com.hellokoding.auth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

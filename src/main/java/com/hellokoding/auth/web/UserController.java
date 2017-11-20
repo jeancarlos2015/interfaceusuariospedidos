@@ -1,8 +1,8 @@
-package com.hellokoding.auth.cci;
+package com.hellokoding.auth.web;
 
-import com.hellokoding.auth.cdp.User;
-import com.hellokoding.auth.cgt.SecurityService;
-import com.hellokoding.auth.cgt.UserService;
+import com.hellokoding.auth.model.User;
+import com.hellokoding.auth.service.SecurityService;
+import com.hellokoding.auth.service.UserService;
 import com.hellokoding.auth.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,22 +42,22 @@ public class UserController {
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/contaCliente";
+        return "redirect:/index";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
         if (error != null)
-            model.addAttribute("error", "Usuário ou senha inválidos!!.");
+            model.addAttribute("error", "Your username and password is invalid.");
 
         if (logout != null)
-            model.addAttribute("message", "Você logou com sucesso!!!.");
+            model.addAttribute("message", "You have been logged out successfully.");
 
         return "login";
     }
 
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
     public String index(Model model) {
-        return "contaCliente";
+        return "index";
     }
 }

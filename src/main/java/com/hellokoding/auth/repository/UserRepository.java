@@ -1,6 +1,6 @@
-package com.hellokoding.auth.cgd;
+package com.hellokoding.auth.repository;
 
-import com.hellokoding.auth.cdp.User;
+import com.hellokoding.auth.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

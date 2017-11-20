@@ -1,4 +1,4 @@
-package com.hellokoding.auth.cgt;
+package com.hellokoding.auth.service;
 
 public interface SecurityService {
     String findLoggedInUsername();

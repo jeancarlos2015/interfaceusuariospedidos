@@ -1,4 +1,4 @@
-package com.hellokoding.auth.cdp;
+package com.hellokoding.auth.model;
 
 import javax.persistence.*;
 import java.util.Set;

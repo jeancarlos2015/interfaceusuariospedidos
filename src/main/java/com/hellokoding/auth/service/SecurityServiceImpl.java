@@ -1,4 +1,4 @@
-package com.hellokoding.auth.cgt;
+package com.hellokoding.auth.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

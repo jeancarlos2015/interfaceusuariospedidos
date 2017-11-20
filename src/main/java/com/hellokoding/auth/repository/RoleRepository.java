@@ -1,6 +1,6 @@
-package com.hellokoding.auth.cgd;
+package com.hellokoding.auth.repository;
 
-import com.hellokoding.auth.cdp.Role;
+import com.hellokoding.auth.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long>{
