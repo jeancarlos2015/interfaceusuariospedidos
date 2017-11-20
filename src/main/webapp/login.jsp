@@ -51,11 +51,13 @@
 
                     <div class="form-group ${error != null ? 'has-error' : ''}">
                         <br>
+                        <br>
                         <span>${message}</span>
                         <br>
                         <input name="username" type="text" class="name wow zoomIn" placeholder="Username"
                                autofocus="true"/>
                         <input name="password" type="password" class="name wow zoomIn" placeholder="Password"/>
+                        <br>
                         <br>
                         <span>${error}</span>
                         <br>
