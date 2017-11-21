@@ -3,7 +3,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
     <head>
         <meta charset="utf-8">
         <title>SISTEX</title>
@@ -27,6 +27,7 @@
         <script src="resources/js/chart.min.js"></script>
         <script src="resources/js/chart-data.js"></script>
         <script src="resources/js/script.js"></script>
+        <script src="resources/js/"></script>
     </head>
 
     <body>
