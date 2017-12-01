@@ -1,6 +1,11 @@
 angular.module('appCliente', [])
         .controller('controllerClientes', function ($scope, $http) {
             $scope.cliente = {};
+            $scope.cliente.nome="jean";
+            $scope.cliente.email="jean@gmail.com";
+            $scope.cliente.endereco="Rua joao bosco 111";
+            $scope.cliente.telefone="3333-4444";
+            $scope.cliente.cpf = "111.111.222-44";
             $scope.salvarCliente = function () {
                 $http.post('https://servicocontroleusuarios.herokuapp.com/cliente', $scope.cliente).
                         then(function (response) {
@@ -10,7 +15,8 @@ angular.module('appCliente', [])
                                 $scope.mensagemCliente = "Cliente não foi cadastrado!!!";
                             }
 
-                        });
+                        })
+                                ;
             };
 
 

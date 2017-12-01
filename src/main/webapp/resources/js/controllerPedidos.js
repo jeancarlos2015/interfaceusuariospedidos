@@ -2,6 +2,9 @@ angular.module('appPedidos', [])
         .controller('controllerPedidos', function ($scope, $http) {
             $scope.pedido = {};
             $scope.salvarPedido = function () {
+                $scope.pedido.precototal=0.0;
+                $scope.pedido.status = "pendente";
+                $scope.
                 $http.post('https://servicocontroleusuarios.herokuapp.com/pedido', $scope.pedido).
                         then(function (response) {
                             if (response.data) {

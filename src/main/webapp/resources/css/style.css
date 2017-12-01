@@ -478,7 +478,10 @@ height:29px; border:0px; border-radius:4px; margin-top:20px; cursor:pointer; }
     transform: scale(1);
   }
 }
-
+.alinha{
+    display: block;
+    margin: 5%;
+}
 .fixedsocial{z-index:999; position:fixed; bottom:400px; width:20px;  min-height:50px;  padding:8px 0px;}
 .fixedsocial a{text-decoration:none;}
 

@@ -5,7 +5,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
 <!DOCTYPE html>
-<html lang="en" ng-app="appCliente" ng-controller="controllerClientes">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,6 @@
         <script type="text/javascript" src="resources/js/wow.min.js"></script>
         <script type="text/javascript" src="resources/js/init.js"></script>
         <script type="text/javascript" src="resources/js/manipulaTela1.js"></script>
-        <script type="text/javascript" src="resources/js/controllerClientes.js"></script>
     </head>
 
     <body>
@@ -46,63 +45,40 @@
 
         <div class="bookonlinewrapper container">
             <div class="container" id="bookonline">
-                <h3 class="wow fadeInUp" data-wow-delay="0.3s">QUER SER NOSSO CLIENTE, CADASTRA-SE AGORA</h3>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Seu Nome" ng-model="cliente.nome" required/>
+                <h3 class="wow fadeInUp" data-wow-delay="0.3s">CRIE O SEU LOGIN PRIMEIRAMENTE</h3>
             </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Seu Email" ng-model="cliente.email" required/>
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Seu Telefone" ng-model="cliente.telefone" required/>
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Seu Endereço" ng-model="cliente.endereco" required/>
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Seu CPF" ng-model="cliente.cpf" required/>
-            </div>
-
-            <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required/>
-            </div>
             <form:form method="POST" modelAttribute="userForm" class="form-signin">
 
 
                 <spring:bind path="username">
-                    <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <div class="form-group ${status.error ? 'has-error' : ''} alinha">
                         <form:input type="text" path="username" class="form-control name" placeholder="Username"
                                     autofocus="true"></form:input>
                         <form:errors path="username"></form:errors>
                         </div>
                 </spring:bind>
+
                 <spring:bind path="password">
-                    <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <div class="form-group ${status.error ? 'has-error' : ''} alinha">
                         <form:input type="password" path="password" class="form-control name" placeholder="Password"></form:input>
                         <form:errors path="password"></form:errors>
                         </div>
                 </spring:bind>
 
                 <spring:bind path="passwordConfirm">
-                    <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <div class="form-group ${status.error ? 'has-error' : ''} alinha">
                         <form:input type="password" path="passwordConfirm" class="form-control name"
                                     placeholder="Confirm your password"></form:input>
                         <form:errors path="passwordConfirm"></form:errors>
                         </div>
                 </spring:bind>
 
-                <button class="booknow wow fadeInUp" type="submit" ng-click="salvarCliente()">Cadastrar</button>
+                <button class="booknow wow fadeInUp alinha" type="submit">Cadastrar</button>
 
             </form:form>
-            <h3> 
-                
-                {{mensagemCliente}} 
-                
+            <h3 ng-if="mensagemCliente"> 
+                ${mensagemCliente} 
             </h3>
         </div>
         <!-- /container -->
