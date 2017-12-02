@@ -74,7 +74,7 @@
                         </div>
                 </spring:bind>
 
-                <button class="booknow wow fadeInUp alinha" type="submit">Cadastrar</button>
+                <button class="booknow wow fadeInUp alinha2" type="submit">Cadastrar</button>
 
             </form:form>
             <h3 ng-if="mensagemCliente"> 

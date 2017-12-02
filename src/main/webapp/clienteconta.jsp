@@ -114,24 +114,17 @@
 
                                 <li class="slide">
                                     <div ng-repeat="p in produtos1">
-<!--                                        <div class="item">
-                                            <img src="{{p.imageStr}}" width="150" height="150" alt="sliderimg" class="wow flipInX"
-                                                 data-wow-delay=".8s"> 
-
-                                            <h4>{{p.nome}}</h4>
-                                            <h4>Preço:{{p.preco}},00</h4>
-                                        </div>-->
                                         <div class="card-block">
                                             <div class="mt-1">
-                                                <img src="resources/{{p.imageStr}}"  alt="produto " class="circle float-left profile-photo" width="45" height="auto">
-                                                <div class="float-left ml-1">
+                                                <img src="resources/{{p.imageStr}}"  class="circle float-left profile-photo" width="200" height="auto">
+                                                <div class="ml-1 direita">
                                                     <p class="m-0"><strong>{{p.nome}}</strong> <span class="text-muted">{{p.descricao}}</span></p>
                                                     <p class="text-small text-muted">Preço:{{p.preco}},00</p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <hr class="m-0 mb-2" />
                                                 <form>
-                                                    <button>Solicitar</button>
+                                                    <button>Comprar</button>
                                                 </form>
                                                 
                                             </div>

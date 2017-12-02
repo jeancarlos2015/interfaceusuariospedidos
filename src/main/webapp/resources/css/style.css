@@ -482,6 +482,20 @@ height:29px; border:0px; border-radius:4px; margin-top:20px; cursor:pointer; }
     display: block;
     margin: 5%;
 }
+.alinha input{
+    width: 100%;
+}
+.alinha2{
+    display: block;
+    margin: 12%;
+}
+.alinha2 button{
+    width: 100%;
+}
+.direita{
+    margin-left: 20%;
+    text-align: justify;
+}
 .fixedsocial{z-index:999; position:fixed; bottom:400px; width:20px;  min-height:50px;  padding:8px 0px;}
 .fixedsocial a{text-decoration:none;}
 
