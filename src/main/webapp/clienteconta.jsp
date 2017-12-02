@@ -63,7 +63,7 @@
             </form>
 
             <h2>Bem Vindo ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Sair</a></h2>
-
+            <br>
         </c:if>
         <div class="navbar">
             <div class="row">
@@ -82,10 +82,8 @@
             <div id="sidebar" class="column">
                 <h5>Navegação</h5>
                 <ul>
-                    <li><a href="#"><em class="fa fa-home"></em> Inicio</a></li>
-
+                    <li><a href="clienteconta"><em class="fa fa-home"></em> Inicio</a></li>
                     <li><a href="pedidos.jsp"><em class="fa fa-forward"></em>Pedidos</a></li>
-                    <li><a href="clienteconta.jsp"><em class="fa fa-forward"></em>Produtos</a></li>
                 </ul>
             </div>
 
@@ -124,9 +122,11 @@
                                                 <div class="clearfix"></div>
                                                 <hr class="m-0 mb-2" />
                                                 <form>
-                                                    <button>Comprar</button>
+                                                    <input  type="text"   ng-value="{{p.idproduto}}" id="{{p.idproduto}}"  ng-model="pedido.idproduto">
+                                                    <input  type="text" ng-value="{{p.preco}}" id="{{p.preco}}" ng-model="pedido.precototal">
+                                                    <input type="button" ng-click="salvarPedido()" value="Comprar">
                                                 </form>
-                                                
+                                                <h3>{{mensagemPedido}}</h3>
                                             </div>
                                         </div>
                                     </div>

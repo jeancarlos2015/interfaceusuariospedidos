@@ -54,16 +54,20 @@ public class UserController {
         if (error != null) {
             model.addAttribute("error", "Usuário ou senha inválidos!!!");
         }
-
-        if (logout != null) {
+        else if (logout != null) {
             return "clienteconta";
         }
-
         return "login";
     }
 
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String index(Model model) {
+        return "login";
+    }
+    
+    @RequestMapping(value = {"/logout"}, method = RequestMethod.GET)
+    public String logout(Model model) {
+        
         return "login";
     }
 }

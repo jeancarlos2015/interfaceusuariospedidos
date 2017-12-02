@@ -83,9 +83,7 @@
                 <h5>Navegação</h5>
                 <ul>
                     <li><a href="clienteconta.jsp"><em class="fa fa-home"></em> Inicio</a></li>
-
                     <li><a href="pedidos.jsp"><em class="fa fa-forward"></em>Pedidos</a></li>
-                    <li><a href="#"><em class="fa fa-forward"></em>Produtos</a></li>
                 </ul>
             </div>
 
