@@ -1,7 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="en" ng-app="appProduto" ng-controller="controllerProdutos">
     <head>
@@ -27,7 +27,6 @@
         <script src="resources/js/chart.min.js"></script>
         <script src="resources/js/chart-data.js"></script>
         <script src="resources/js/script.js"></script>
-        <script src="resources/js/"></script>
         <link rel="stylesheet" href="resources/css/style.css">
         <link rel="stylesheet" href="resources/css/animate.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -41,12 +40,9 @@
         <script type="text/javascript" src="resources/js/wow.min.js"></script>
         <script type="text/javascript" src="resources/js/init.js"></script>
         <script type="text/javascript" src="resources/js/manipulaTela1.js"></script>
-        <script type="text/javascript" src="resources/js/controllerClientes.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="resources/css/style.css">
-        <link rel="stylesheet" href="resources/css/animate.css">
         <link rel="icon" href="resources/images/icon.png">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -57,8 +53,11 @@
     </head>
 
     <body>
+        
         <c:if test="${pageContext.request.userPrincipal.name != null}">
-            <form id="logoutForm" method="POST" action="${contextPath}/logout" class="cursor">
+
+            <form id="logoutForm" method="POST" action="${contextPath}/logout">
+                <h2>${_csrf.token}</h2>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
 

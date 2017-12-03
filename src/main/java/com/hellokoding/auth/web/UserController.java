@@ -29,14 +29,12 @@ public class UserController {
         model.addAttribute("userForm", new User());
         return "registration";
     }
+
     @RequestMapping(value = "/cadastro", method = RequestMethod.GET)
     public String indexcliente(Model model) {
         return "cadastro";
     }
-    @RequestMapping(value = "/clienteconta", method = RequestMethod.GET)
-    public String painel(Model model) {
-        return "clienteconta";
-    }
+
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);
@@ -54,20 +52,16 @@ public class UserController {
         if (error != null) {
             model.addAttribute("error", "Usuário ou senha inválidos!!!");
         }
-        else if (logout != null) {
-            return "clienteconta";
+     
+        if (logout != null) {
+            model.addAttribute("message", "deslogado!!");
         }
         return "login";
     }
 
-    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
-    public String index(Model model) {
-        return "login";
-    }
-    
-    @RequestMapping(value = {"/logout"}, method = RequestMethod.GET)
-    public String logout(Model model) {
-        
-        return "login";
+ 
+    @RequestMapping(value = {"/","/clienteconta"}, method = RequestMethod.GET)
+    public String conta(Model model) {
+        return "clienteconta";
     }
 }
