@@ -54,7 +54,7 @@ public class UserController {
         }
      
         if (logout != null) {
-            model.addAttribute("message", "deslogado!!");
+            model.addAttribute("message", "");
         }
         return "login";
     }

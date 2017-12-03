@@ -57,7 +57,6 @@
         <c:if test="${pageContext.request.userPrincipal.name != null}">
 
             <form id="logoutForm" method="POST" action="${contextPath}/logout">
-                <h2>${_csrf.token}</h2>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
 
@@ -78,13 +77,13 @@
             </div>
         </div>
         <div class="row">
-            <div id="sidebar" class="column">
+<!--            <div id="sidebar" class="column">
                 <h5>Navegação</h5>
                 <ul>
                     <li><a href="clienteconta"><em class="fa fa-home"></em> Inicio</a></li>
                     <li><a href="pedidos.jsp"><em class="fa fa-forward"></em>Pedidos</a></li>
                 </ul>
-            </div>
+            </div>-->
 
 
             <section id="main-content" class="column column-offset-20">
