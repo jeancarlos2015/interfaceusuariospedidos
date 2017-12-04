@@ -1,5 +1,5 @@
 angular.module('appProduto', [])
-        .controller('controllerProdutos', function ($scope, $http) {
+        .controller('controllerProdutos', function ($scope, $http,$rootScope) {
 
             $scope.produtos = [];
             $scope.listarProdutos = function () {
@@ -11,20 +11,15 @@ angular.module('appProduto', [])
             };
 
             $scope.produtos1 = [];
-            $scope.nome = "";
+            $scope.nomeproduto = "";
             $scope.listarProdutosNome = function () {
-                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar/' + $scope.nome).
+                $http.get('https://servicocontrolepedidos.herokuapp.com/produto/listar/' + $scope.nomeproduto).
                         then(function (response) {
                             $scope.produtos1 = response.data;
 
                         });
             };
             $scope.pedido = {};
-            $scope.pedido.precototal = 0.0;
-            $scope.pedido.status = "pendente";
-            $scope.pedido.idproduto = 0;
-            $scope.pedido.datapedido = "";
-            $scope.pedido.idcliente = 0;
             $scope.mensagemPedido="";
             
             $scope.salvarPedido = function () {
@@ -38,6 +33,29 @@ angular.module('appProduto', [])
 
                         });
             };
+            $scope.pedidos=[];
+            $scope.listarPedidos = function () {
+                $http.get('https://servicocontrolepedidos.herokuapp.com/pedido').
+                        then(function (response) {
+                           $scope.pedidos = response.data;
+                        });
+            };
             
+              $scope.cliente = {};
+            $scope.cliente.idcliente = 0;
+            $scope.cliente.cpf="";
+            $scope.cliente.datanascimento="";
+            $scope.cliente.email="";
+            $scope.cliente.endereco="";
+            $scope.cliente.nome="";
+            $scope.cliente.telefone="";
+            $rootScope.clientesalvo={};
+            $scope.salvarCliente = function () {
+                $http.post('https://servicocontrolepedidos.herokuapp.com/cliente', $scope.cliente).
+                        then(function (response) {
+                            $rootScope.clientesalvo = response.data;
+                            $scope.mensagemCliente="O cliente "+$rootScope.clientesalvo.nome+" foi salvo";
+                        });
+            };
         });
 

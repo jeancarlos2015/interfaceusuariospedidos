@@ -22,6 +22,8 @@ body {background:url(../images/BG.jpg); margin:0px; padding:0px; font-family:han
 
 iframe {width:100%; height:100%; border:0px; margin:0px; padding:0px; }
 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+
 .cursor {
 cursor:pointer;
 }

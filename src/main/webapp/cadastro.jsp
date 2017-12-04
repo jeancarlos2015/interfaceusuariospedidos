@@ -5,7 +5,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
 <!DOCTYPE html>
-<html lang="en" ng-app="appCliente" ng-controller="controllerClientes">
+<html lang="en" ng-app="appProduto" ng-controller="controllerProdutos">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,48 +26,50 @@
         <script type="text/javascript" src="resources/js/wow.min.js"></script>
         <script type="text/javascript" src="resources/js/init.js"></script>
         <script type="text/javascript" src="resources/js/manipulaTela1.js"></script>
-        <script type="text/javascript" src="resources/js/controllerClientes.js"></script>
+        <script type="text/javascript" src="resources/js/controllerProdutos.js"></script>
     </head>
 
     <body>
-        <form action="clienteconta">
-            <div class="bookonlinewrapper container">
-                <div class="container" id="bookonline">
-                    <h3 class="wow fadeInUp" data-wow-delay="0.3s">TERMINE O CADASTRO</h3>
-                </div>
 
-                <div class="form-group">
-                    <input type="text" class="form-control name" placeholder="Seu Nome" ng-model="cliente.nome" required/>
-                </div>
+        <div class="bookonlinewrapper container">
+            <div class="container" id="bookonline">
+                <h3 class="wow fadeInUp" data-wow-delay="0.3s">TERMINE O CADASTRO</h3>
+            </div>
 
-                <div class="form-group">
-                    <input type="text" class="form-control name" placeholder="Seu Email" ng-model="cliente.email" required/>
-                </div>
+            <div class="form-group">
+                <input type="text" class="form-control name"  placeholder="Seu Nome" ng-model="cliente.nome" required/>
+            </div>
 
-                <div class="form-group">
-                    <input type="text" class="form-control name" placeholder="Seu Telefone" ng-model="cliente.telefone" required/>
-                </div>
+            <div class="form-group">
+                <input type="text" class="form-control name"   placeholder="Seu Email" ng-model="cliente.email" required/>
+            </div>
 
-                <div class="form-group">
-                    <input type="text" class="form-control name" placeholder="Seu Endereço" ng-model="cliente.endereco" required/>
-                </div>
+            <div class="form-group">
+                <input type="text" class="form-control name"  placeholder="Seu Telefone" ng-model="cliente.telefone" required/>
+            </div>
 
-                <div class="form-group">
-                    <input type="text" class="form-control name" placeholder="Seu CPF" ng-model="cliente.cpf" required/>
-                </div>
+            <div class="form-group">
+                <input type="text" class="form-control name" placeholder="Seu Endereço" ng-model="cliente.endereco" required/>
+            </div>
 
-                <div class="form-group">
-                    <input type="text"  data-format="dd-MM-yyyy" class="form-control name" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required/>
-                </div>
-                <button class="booknow wow fadeInUp" type="submit" ng-click="salvarCliente()">Cadastrar</button>
-        </form>
+            <div class="form-group">
+                <input type="text" class="form-control name"  placeholder="Seu CPF" ng-model="cliente.cpf" required/>
+            </div>
 
-        <h3 ng-if="mensagemCliente"> 
-            ${mensagemCliente} 
-        </h3>
-    </div>
-    <!-- /container -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
-</body>
+            <div class="form-group">
+                <input type="text"  data-format="dd-MM-yyyy"  class="form-control name" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required/>
+            </div>
+            <button class="booknow wow fadeInUp" type="submit" ng-click="salvarCliente()">Cadastrar</button>
+
+            <br>
+            <h3> {{mensagemCliente}} </h3>
+            <br>
+            <form action="login">
+                <button class="booknow wow fadeInUp" type="submit">Voltar para Login</button>
+            </form>
+        </div>
+        <!-- /container -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+    </body>
 </html>

@@ -77,9 +77,6 @@
                 <button class="booknow wow fadeInUp alinha2" type="submit">Cadastrar</button>
 
             </form:form>
-            <h3 ng-if="mensagemCliente"> 
-                ${mensagemCliente} 
-            </h3>
         </div>
         <!-- /container -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
