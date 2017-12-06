@@ -1,8 +1,3 @@
-<%-- 
-    Document   : produtos
-    Created on : 06/12/2017, 01:30:46
-    Author     : jean
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
