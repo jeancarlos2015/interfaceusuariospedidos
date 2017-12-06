@@ -64,4 +64,14 @@ public class UserController {
     public String conta(Model model) {
         return "clienteconta";
     }
+    
+     @RequestMapping(value = {"/index"}, method = RequestMethod.GET)
+    public String index(Model model) {
+        return "index";
+    }
+    
+    @RequestMapping(value = {"/produtos"}, method = RequestMethod.GET)
+    public String produtos(Model model) {
+        return "produtos";
+    }
 }
