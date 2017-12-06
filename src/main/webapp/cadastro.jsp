@@ -5,7 +5,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
 <!DOCTYPE html>
-<html lang="en" ng-app="appProduto" ng-controller="controllerProdutos">
+<html lang="en" ng-app="appCliente" ng-controller="controllerClientes">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,7 @@
         <script type="text/javascript" src="resources/js/wow.min.js"></script>
         <script type="text/javascript" src="resources/js/init.js"></script>
         <script type="text/javascript" src="resources/js/manipulaTela1.js"></script>
-        <script type="text/javascript" src="resources/js/controllerProdutos.js"></script>
+        <script type="text/javascript" src="resources/js/controllerClientes.js"></script>
     </head>
 
     <body>
@@ -35,31 +35,32 @@
             <div class="container" id="bookonline">
                 <h3 class="wow fadeInUp" data-wow-delay="0.3s">TERMINE O CADASTRO</h3>
             </div>
+            <form name="cadastrocliente" ng-click="salvarCliente()">
+                <div class="form-group">
+                    <input type="text" class="form-control name"  placeholder="Seu Nome" ng-model="cliente.nome" required/>
+                </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control name"  placeholder="Seu Nome" ng-model="cliente.nome" required/>
-            </div>
+                <div class="form-group">
+                    <input type="text" class="form-control name"   placeholder="Seu Email" ng-model="cliente.email" required/>
+                </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control name"   placeholder="Seu Email" ng-model="cliente.email" required/>
-            </div>
+                <div class="form-group">
+                    <input type="text" class="form-control name"  placeholder="Seu Telefone" ng-model="cliente.telefone" required/>
+                </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control name"  placeholder="Seu Telefone" ng-model="cliente.telefone" required/>
-            </div>
+                <div class="form-group">
+                    <input type="text" class="form-control name" placeholder="Seu Endereço" ng-model="cliente.endereco" required/>
+                </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control name" placeholder="Seu Endereço" ng-model="cliente.endereco" required/>
-            </div>
+                <div class="form-group">
+                    <input type="text" class="form-control name"  placeholder="CPF SÓ NUMEROS"  name="numbers" pattern="[0-9]+$" ng-model="cliente.cpf" required/>
+                </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control name"  placeholder="CPF SÓ NUMEROS" required="" name="numbers" pattern="[0-9]+$" ng-model="cliente.cpf"/>
-            </div>
-
-            <div class="form-group">
-                <input type="text"  data-format="dd-MM-yyyy"  class="form-control name" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required/>
-            </div>
-            <button class="booknow wow fadeInUp" type="submit" ng-click="salvarCliente()">Cadastrar</button>
+                <div class="form-group">
+                    <input type="text"  data-format="dd-MM-yyyy"  class="form-control name" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required/>
+                </div>
+                <input class="booknow wow fadeInUp" type="button" value="Cadastrar Cliente"/>
+            </form>
 
             <br>
             <h3> {{mensagemCliente}} </h3>

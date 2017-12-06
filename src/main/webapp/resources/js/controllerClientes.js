@@ -6,8 +6,6 @@ angular.module('appCliente', [])
                         then(function (response) {
                             if (response.data) {
                                 $scope.mensagemCliente = "Cliente cadastrado com sucesso!!!";
-                            } else {
-                                $scope.mensagemCliente = "Cliente não foi cadastrado!!!";
                             }
 
                         });
