@@ -1,3 +1,8 @@
+<%-- 
+    Document   : produtos
+    Created on : 06/12/2017, 01:30:46
+    Author     : jean
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -7,12 +12,12 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title> Inicio </title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel='stylesheet' type='text/css'/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="resources/css/style.css"/>
-        <link rel="stylesheet" href="resources/css/animate.css"/>
-        <link rel="icon" href="resources/images/icon.png"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,300,700" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="resources/css/style.css">
+        <link rel="stylesheet" href="resources/css/animate.css">
+        <link rel="icon" href="resources/images/icon.png">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -25,13 +30,13 @@
 
         <div class="headerwrapper">
             <div id="header" class="container">
-                <div class="logo"/> <a href="#"><img src="resources/images/LOGO.png" alt="logo" width="165" height="74"/></a> </div> <!--end of Logo-->
+                <div class="logo"> <a href="#"><img src="resources/images/LOGO.png" alt="logo" width="165" height="74"></a> </div> <!--end of Logo-->
                 <nav>
                     <ul id="navigations">
                         <li><a href="index">PRINCIPAL</a></li>
-                        <li> <a href="login">ACESSO</a></li>
+                        <li> <a href="login">ACESSO RESTRITO</a></li>
                         <li><a href="produtos">PRODUTOS</a></li>
-                        <li><a href="https://interfacegerentefornecedor.herokuapp.com">FUNCIONÁRIOS</a></li>
+                        <li><a href="http://interfacegerentefornecedor.herokuapp.com">FUNCIONÁRIO</a></li>
                     </ul>
                 </nav>
             </div> <!--end of header-->
@@ -57,7 +62,7 @@
                 <div ng-repeat="p in produtos1">
                     <div class="item">
                         <img src="resources/{{p.imageStr}}" width="150" height="150" alt="sliderimg" class="wow flipInX"
-                             data-wow-delay=".8s"/> 
+                             data-wow-delay=".8s"> 
 
                         <h4>{{p.nome}}</h4>
                         <h4>Preço:{{p.preco}},00</h4>
