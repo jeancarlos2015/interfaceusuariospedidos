@@ -10,6 +10,7 @@ public class User {
     private String username;
     private String password;
     private String passwordConfirm;
+    private String tipo;
     private Set<Role> roles;
 
     @Id
@@ -55,5 +56,13 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

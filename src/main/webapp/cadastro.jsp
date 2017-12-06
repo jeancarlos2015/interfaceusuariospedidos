@@ -53,7 +53,7 @@
             </div>
 
             <div class="form-group">
-                <input type="text" class="form-control name"  placeholder="Seu CPF" ng-model="cliente.cpf" required/>
+                <input type="text" class="form-control name"  placeholder="CPF SÓ NUMEROS" required="" name="numbers" pattern="[0-9]+$" ng-model="cliente.cpf"/>
             </div>
 
             <div class="form-group">

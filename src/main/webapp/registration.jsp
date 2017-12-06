@@ -32,13 +32,14 @@
         <div class="headerwrapper">
             <div id="header" class="container">
                 <div class="logo"> <a href="#"><img src="resources/images/LOGO.png" alt="logo" width="165" height="74"></a> </div> <!--end of Logo-->
-                <nav>
+                 <nav>
                     <ul id="navigations">
-                        <li><a href="https://interfacegerentefornecedor.herokuapp.com/index.html">PRINCIPAL</a></li>
-                        <li> <a href="login.jsp">ACESSO</a></li>
-                        <li> <a href="https://interfacegerentefornecedor.herokuapp.com/produtos.html">PRODUTOS</a></li>
+                        li><a href="index">PRINCIPAL</a></li>
+                        <li> <a href="login">ACESSO</a></li>
+                        <li><a href="produtos">PRODUTOS</a></li>
+                        <li><a href="https://interfacegerentefornecedor.herokuapp.com">FUNCIONÁRIO</a></li>
                     </ul>
-                </nav>
+                </nav>  
             </div> <!--end of header-->
 
         </div> <!-- end of headerwrapper-->
@@ -53,7 +54,7 @@
 
                 <spring:bind path="username">
                     <div class="form-group ${status.error ? 'has-error' : ''} alinha">
-                        <form:input type="text" path="username" class="form-control name" placeholder="Username"
+                        <form:input type="text" path="username" class="form-control name" placeholder="CPF SÓ NUMEROS" required="" name="numbers" pattern="[0-9]+$"
                                     autofocus="true"></form:input>
                         <form:errors path="username"></form:errors>
                         </div>
@@ -61,7 +62,7 @@
 
                 <spring:bind path="password">
                     <div class="form-group ${status.error ? 'has-error' : ''} alinha">
-                        <form:input type="password" path="password" class="form-control name" placeholder="Password"></form:input>
+                        <form:input type="password" path="password" class="form-control name"  placeholder="Password"></form:input>
                         <form:errors path="password"></form:errors>
                         </div>
                 </spring:bind>

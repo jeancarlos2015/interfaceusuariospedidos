@@ -60,19 +60,24 @@
             <form id="logoutForm" method="POST" action="${contextPath}/logout">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
-            <h1>{{clientesalvo.nome}}</h1>
-            <h4>CPF:{{clientesalvo.cpf}}</h4>
-            <h4>Email:{{clientesalvo.email}}</h4>
-            <h4>Endereço:{{clientesalvo.endereco}}</h4>
-            <h4>Telefone:{{clientesalvo.telefone}}</h4>
-            <h2 class="hidden">Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
-            <br>
-            <input type="button" value="Logout" onclick="document.forms['logoutForm'].submit()"/>
-            <br>
-            <h4>{{mensagemPedido}}</h4>
-            <h2 class="hidden">Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
-            <br>
-            <h4>{{mensagemPedido}}</h4>
+                <div>
+                <h1>{{clientesalvo1.nome}}</h1>
+                <h4>CPF:{{clientesalvo1.cpf}}</h4>
+                <h4>Email:{{clientesalvo1.email}}</h4>
+                <h4>Endereço:{{clientesalvo1.endereco}}</h4>
+                <h4>Telefone:{{clientesalvo1.telefone}}</h4>
+                <h2 class="hidden">Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
+                <br>
+                <input type="button" value="Logout" onclick="document.forms['logoutForm'].submit()"/>
+                <br>
+                <h4>{{mensagemPedido}}</h4>
+                <h2 >Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
+                <br>
+                <h4>{{mensagemPedido}}</h4>
+                <input ng-init="cpfvalor = '${pageContext.request.userPrincipal.name}'" ng-model="cpfvalor"/>
+                <button ng-click="buscarCliente()">Atualizar</button>
+            </div>
+
         </c:if>
         <div class="row">
             <section id="main-content" class="contactwrapper">
