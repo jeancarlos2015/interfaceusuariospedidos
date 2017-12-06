@@ -66,7 +66,7 @@
                         <li class="slide">
                             <h5 class="wow fadeInDown" data-wow-delay="0.8s">{{p.nome}}</h5>
                             <p class="wow fadeInUp" data-wow-delay="0.8s">{{p.descricao}}</p>
-                            <img src="{{p.imageStr}}" width="150" height="150" alt="sliderimg" class="wow flipInX"
+                            <img src="resources/{{p.imageStr}}" width="150" height="150" alt="sliderimg" class="wow flipInX"
                                  data-wow-delay=".8s"/> 
                         </li>
                     </ul>
@@ -89,7 +89,7 @@
                         <li class="slide">
                             <div ng-repeat="p in produtos">
                                 <div class="item">
-                                    <img src="{{p.imageStr}}" width="100" height="100" alt="sliderimg" class="wow flipInX"
+                                    <img src="resources/{{p.imageStr}}" width="100" height="100" alt="sliderimg" class="wow flipInX"
                                          data-wow-delay=".8s"> 
 
                                     <h3>{{p.nome}}</h3>
