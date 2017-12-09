@@ -52,26 +52,26 @@ public class UserController {
         if (error != null) {
             model.addAttribute("error", "Usuário ou senha inválidos!!!");
         }
-     
+
         if (logout != null) {
             model.addAttribute("message", "");
         }
         return "login";
     }
 
- 
-    @RequestMapping(value = {"/","/clienteconta"}, method = RequestMethod.GET)
-    public String conta(Model model) {
-        return "clienteconta";
-    }
-    
-     @RequestMapping(value = {"/index"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/index"}, method = RequestMethod.GET)
     public String index(Model model) {
         return "index";
     }
-    
+
     @RequestMapping(value = {"/produtos"}, method = RequestMethod.GET)
     public String produtos(Model model) {
         return "produtos";
     }
+
+    @RequestMapping(value = {"/conta"}, method = RequestMethod.GET)
+    public String contacliente(Model model) {
+        return "conta";
+    }
+ 
 }

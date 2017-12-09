@@ -35,7 +35,7 @@
             <div class="container" id="bookonline">
                 <h3 class="wow fadeInUp" data-wow-delay="0.3s">TERMINE O CADASTRO</h3>
             </div>
-            <form name="cadastrocliente" ng-click="salvarCliente()">
+            <form name="cadastrocliente">
                 <div class="form-group">
                     <input type="text" class="form-control name"  placeholder="Seu Nome" ng-model="cliente.nome" required/>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="form-group">
                     <input type="text"  data-format="dd-MM-yyyy"  class="form-control name" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required/>
                 </div>
-                <input class="booknow wow fadeInUp" type="button" value="Cadastrar Cliente"/>
+                <input class="booknow wow fadeInUp" type="button" value="Cadastrar Cliente" ng-click="salvarCliente(cliente)"/>
             </form>
 
             <br>

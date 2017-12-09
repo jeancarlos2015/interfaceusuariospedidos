@@ -51,16 +51,20 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
         <script src="resources/js/controllerProdutos.js"></script>
+        <script src="resources/js/controllerClientes.js"></script>
     </head>
 
     <body>
 
         <c:if test="${pageContext.request.userPrincipal.name != null}">
-
+            <h2 >Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
             <form id="logoutForm" method="POST" action="${contextPath}/logout">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
-                <div>
+
+
+        </c:if>
+<!--            <div ng-app="appCliente" ng-controller="controllerClientes">
                 <h1>{{clientesalvo1.nome}}</h1>
                 <h4>CPF:{{clientesalvo1.cpf}}</h4>
                 <h4>Email:{{clientesalvo1.email}}</h4>
@@ -71,14 +75,7 @@
                 <input type="button" value="Logout" onclick="document.forms['logoutForm'].submit()"/>
                 <br>
                 <h4>{{mensagemPedido}}</h4>
-                <h2 >Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
-                <br>
-                <h4>{{mensagemPedido}}</h4>
-                <input ng-init="cpfvalor = '${pageContext.request.userPrincipal.name}'" ng-model="cpfvalor"/>
-                <button ng-click="buscarCliente()">Atualizar</button>
-            </div>
-
-        </c:if>
+            </div>-->
         <div class="row">
             <section id="main-content" class="contactwrapper">
                 <h3 class="mt-2 wow fadeInUp" data-wow-delay="0.3s"> Produtos</h3>
@@ -87,12 +84,11 @@
                         <div class="card">
                             <div class="card-title">
                                 <!--                                <h2 class="float-left">Produtos</h2>-->
-                                <div class="clearfix"></div>
                                 <form class="navbar-form" ng-click="listarProdutosNome()">
                                     <div class="form-group" style="display:inline;">
                                         <div class="input-group" style="display:table;">
                                             <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"></span></span>
-                                            <input class="form-control" name="nome" placeholder="Pesquise Aqui o Produto" autocomplete="off" autofocus="autofocus" type="text" ng-model="nomeproduto">
+                                            <input class="form-control" name="nome" placeholder="Pesquise Aqui o Produto" autocomplete="off" autofocus="autofocus" type="text" ng-model="nome">
                                             <input class="hidden" type="submit" />
                                         </div>
                                     </div>
@@ -101,22 +97,17 @@
                             <ul class="slides">
 
                                 <li class="slide">
-                                    <div ng-repeat="p in produtos1">
+                                    <div ng-repeat="produto in produtos1">
                                         <div class="card-block">
                                             <div class="mt-1">
-                                                <img src="resources/{{p.imageStr}}"  class="circle float-left profile-photo" width="200" height="auto">
+                                                <img src="resources/{{produto.imageStr}}"  class="circle float-left profile-photo" width="200" height="auto">
                                                 <div class="ml-1 direita">
-                                                    <p class="m-0"><strong>{{p.nome}}</strong> <span class="text-muted">{{p.descricao}}</span></p>
-                                                    <p class="text-small text-muted">Preço:{{p.preco}},00</p>
+                                                    <p class="m-0"><strong>{{produto.nome}}</strong> <span class="text-muted">{{produto.descricao}}</span></p>
+                                                    <p class="text-small text-muted">Preço:{{produto.preco}},00</p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <hr class="m-0 mb-2" />
-                                                <form>
-                                                    <input  type="text"   ng-value="{{p.idproduto}}" id="{{p.idproduto}}"  ng-model="pedido.idproduto">
-                                                    <input  type="text" ng-value="{{p.preco}}" id="{{p.preco}}" ng-model="pedido.precototal">
-                                                    <input type="button" ng-click="salvarPedido()" value="Comprar">
-                                                </form>
-
+                                                <input type="button" ng-click="salvarPedido(produto)" value="Comprar">
                                             </div>
                                         </div>
                                     </div>
@@ -136,18 +127,20 @@
                             </div>
                             <ul class="slides">
 
-                                <li class="slide">
-                                    <div ng-init="ped in pedidos">
+                                <li class="slide alinha3">
+                                    <div ng-repeat="ped in pedidos">
                                         <div class="card-block">
                                             <div class="mt-1">                                                
                                                 <div class="float-left ml-1">
-                                                    <p class="m-0"><strong>{{p.nome}}</strong> <span class="text-muted">{{p.descricao}}</span></p>
-                                                    <p class="text-small text-muted">Preço:{{p.preco}},00</p>
+                                                    <h4>ID DO PEDIDO: {{ped.idpedido}}</h4>
+                                                    <h4 class="m-0">DESCRIÇÃO :<span class="text-muted">{{ped.descricao}}</span></h4>
+                                                    <h4 class="text-small text-muted">Preço: {{ped.precototal}},00</h4>
+                                                    <h4 class="text-small text-muted">STATUS: {{ped.status}}</h4>
                                                 </div>
                                                 <div class="clearfix">
                                                     <hr class="m-0 mb-2" />
                                                     <form>
-                                                        <input type="button" value="Cancelar" />
+                                                        <input type="button" value="Cancelar" ng-click="cancelarPedido(ped)"/>
                                                     </form>
                                                 </div>
 

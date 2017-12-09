@@ -494,6 +494,9 @@ height:29px; border:0px; border-radius:4px; margin-top:20px; cursor:pointer; }
 .alinha2 button{
     width: 100%;
 }
+.alinha3 h4{
+    text-align: left;
+}
 .direita{
     margin-left: 20%;
     text-align: justify;
