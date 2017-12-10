@@ -21,10 +21,10 @@ angular.module('appProduto', [])
 
 
             $scope.produto = {};
-            $scope.salvarPedido = function (produto,cliente) {
+            $scope.fazerPedido = function (produto,cliente) {
                 var pedido = {};
                 pedido.precototal = produto.preco;
-                pedido.status = "pendente";
+                pedido.status = "Novo";
                 pedido.idproduto = produto.idproduto;
                 pedido.idcliente = cliente.idcliente;
                 pedido.descricao = produto.descricao;

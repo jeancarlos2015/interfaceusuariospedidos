@@ -111,7 +111,7 @@
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <hr class="m-0 mb-2" />
-                                                <input type="button" ng-click="salvarPedido(produto, cliente)" value="Comprar">
+                                                <input type="button" ng-click="fazerPedido(produto, cliente)" value="Comprar">
                                             </div>
                                         </div>
                                     </div>
