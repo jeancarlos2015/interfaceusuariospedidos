@@ -7,5 +7,6 @@ public interface UserService {
 
     User findByUsername(String username);
     
+    User findByUsernameAndPassword(String username, String password);
     
 }

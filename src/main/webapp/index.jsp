@@ -32,7 +32,7 @@
         <script type="text/javascript" src="resources/js/wow.min.js"></script>
         <script type="text/javascript" src="resources/js/init.js"></script>
         <script type="text/javascript" src="resources/js/manipulaTela1.js"></script>
-        <script src="resources/js/controllerProduto.js" type="text/javascript"></script> 
+        <script src="resources/js/controllerProdutos.js" type="text/javascript"></script> 
     </head>
     <body  >
 

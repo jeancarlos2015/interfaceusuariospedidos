@@ -46,6 +46,8 @@ public class UserController {
         model.addAttribute("mensagemCliente", "Acesso criado com sucesso!!!");
         return "redirect:/cadastro";
     }
+    
+
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
@@ -54,7 +56,7 @@ public class UserController {
         }
 
         if (logout != null) {
-            model.addAttribute("message", "");
+            model.addAttribute("message", "teste");
         }
         return "login";
     }

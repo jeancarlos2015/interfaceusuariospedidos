@@ -21,12 +21,14 @@ angular.module('appProduto', [])
 
 
             $scope.produto = {};
-            $scope.salvarPedido = function (produto) {
+            $scope.salvarPedido = function (produto,cliente) {
                 var pedido = {};
                 pedido.precototal = produto.preco;
                 pedido.status = "pendente";
                 pedido.idproduto = produto.idproduto;
+                pedido.idcliente = cliente.idcliente;
                 pedido.descricao = produto.descricao;
+                pedido.cpf = cliente.cpf;
                 $http.post('https://servicocontrolepedidos.herokuapp.com/pedido', pedido).
                         then(function (response) {
                             if (response.data) {
@@ -42,8 +44,9 @@ angular.module('appProduto', [])
 
 
             $scope.pedidos = [];
-            $scope.listarPedidos = function () {
-                $http.get('https://servicocontrolepedidos.herokuapp.com/pedido').
+            $scope.pedido={};
+            $scope.buscarPedidos = function () {
+                $http.get('https://servicocontrolepedidos.herokuapp.com/pedido/listar/'+$scope.cpf).
                         then(function (response) {
                             $scope.pedidos = response.data;
                         });
@@ -56,6 +59,16 @@ angular.module('appProduto', [])
                             $scope.pedidos.splice(indice, 1);
                         });
             };
+            
+            $scope.cliente={};
+            $scope.cpf="";
+            $scope.buscarCliente = function () {
+                $http.get('https://servicocontrolepedidos.herokuapp.com/cliente/'+$scope.cpf).
+                        then(function (response) {
+                            $scope.cliente = response.data;
+                        });
+            };
+         
 
         });
 

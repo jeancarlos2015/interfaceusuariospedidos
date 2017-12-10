@@ -51,32 +51,36 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
         <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
         <script src="resources/js/controllerProdutos.js"></script>
-        <script src="resources/js/controllerClientes.js"></script>
     </head>
 
     <body>
 
         <c:if test="${pageContext.request.userPrincipal.name != null}">
-            <h2 >Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
+            <h2 >Bem Vindo {{cliente.nome}}</h2>
             <form id="logoutForm" method="POST" action="${contextPath}/logout">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
 
+            <input type="text" class="hidden" ng-init=" cpf = ${pageContext.request.userPrincipal.name}"  ng-model="cpf" />
+            <input type="button" class="hidden" value="atualizar" ng-init="buscarCliente()"/>
+            <input type="button" class="hidden" value="atualizar" ng-init="buscarPedidos()"/>
+            
+            <form>
+                <div>
+                    <h4>CPF:{{cliente.cpf}}</h4>
+                    <h4>Email:{{cliente.email}}</h4>
+                    <h4>Endereço:{{cliente.endereco}}</h4>
+                    <h4>Telefone:{{cliente.telefone}}</h4> 
+                    <br>
+                    <input type="button" value="Logout" onclick="document.forms['logoutForm'].submit()" />
+                    <br>
+                </div>
+            </form>
+      
 
         </c:if>
-<!--            <div ng-app="appCliente" ng-controller="controllerClientes">
-                <h1>{{clientesalvo1.nome}}</h1>
-                <h4>CPF:{{clientesalvo1.cpf}}</h4>
-                <h4>Email:{{clientesalvo1.email}}</h4>
-                <h4>Endereço:{{clientesalvo1.endereco}}</h4>
-                <h4>Telefone:{{clientesalvo1.telefone}}</h4>
-                <h2 class="hidden">Bem Vindo ${pageContext.request.userPrincipal.name}</h2>
-                <br>
-                <input type="button" value="Logout" onclick="document.forms['logoutForm'].submit()"/>
-                <br>
-                <h4>{{mensagemPedido}}</h4>
-            </div>-->
-        <div class="row">
+
+        <div class="row"  >
             <section id="main-content" class="contactwrapper">
                 <h3 class="mt-2 wow fadeInUp" data-wow-delay="0.3s"> Produtos</h3>
                 <div class="row grid-responsive mt-1">
@@ -107,7 +111,7 @@
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <hr class="m-0 mb-2" />
-                                                <input type="button" ng-click="salvarPedido(produto)" value="Comprar">
+                                                <input type="button" ng-click="salvarPedido(produto, cliente)" value="Comprar">
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +122,7 @@
 
                 </div>
 
-                <div class="row grid-responsive mt-2" ng-init="listarPedidos()">
+                <div class="row grid-responsive mt-2">
                     <div class="column">
                         <div class="card">
                             <div class="card-title">

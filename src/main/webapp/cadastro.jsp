@@ -7,14 +7,16 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="appCliente" ng-controller="controllerClientes">
     <head>
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <meta name="description" content="">
         <meta name="author" content="">
-        <link rel="stylesheet" href="resources/css/style.css">
+        
         <link rel="stylesheet" href="resources/css/animate.css">
+        <link rel="stylesheet" href="resources/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
         <script src="resources/jswow.min.js" type="text/javascript"></script>
@@ -35,7 +37,8 @@
             <div class="container" id="bookonline">
                 <h3 class="wow fadeInUp" data-wow-delay="0.3s">TERMINE O CADASTRO</h3>
             </div>
-            <form name="cadastrocliente">
+            
+            <form>
                 <div class="form-group">
                     <input type="text" class="form-control name"  placeholder="Seu Nome" ng-model="cliente.nome" required/>
                 </div>
@@ -51,19 +54,22 @@
                 <div class="form-group">
                     <input type="text" class="form-control name" placeholder="Seu Endereço" ng-model="cliente.endereco" required/>
                 </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control name"  placeholder="CPF SÓ NUMEROS"  name="numbers" pattern="[0-9]+$" ng-model="cliente.cpf" required/>
-                </div>
-
+                <!--
+                                <div class="hidden">
+                                    <input type="text" class="form-control name"  placeholder="CPF SÓ NUMEROS"  name="numbers" pattern="[0-9]+$" ng-model="cliente.cpf" required/>
+                                    
+                                </div>-->
+               
                 <div class="form-group">
                     <input type="text"  data-format="dd-MM-yyyy"  class="form-control name" placeholder="Sua Data de Nascimento" ng-model="cliente.datanascimento" required/>
                 </div>
+                <label type="text" class="hidden" ng-init=" cliente.cpf = ${pageContext.request.userPrincipal.name}"  ng-model="cliente.cpf" />
                 <input class="booknow wow fadeInUp" type="button" value="Cadastrar Cliente" ng-click="salvarCliente(cliente)"/>
             </form>
 
-            <br>
+            <br/>
             <h3> {{mensagemCliente}} </h3>
+<!--            <h2 >Bem Vindo ${pageContext.request.userPrincipal.name}</h2>-->
             <br>
             <form action="login">
                 <button class="booknow wow fadeInUp" type="submit">Voltar para Login</button>
