@@ -65,7 +65,7 @@
             <input type="button" class="hidden" value="atualizar" ng-init="buscarCliente()"/>
             <input type="button" class="hidden" value="atualizar" ng-init="buscarPedidos()"/>
             
-            <form>
+            <form action="http://interfaceusuariospedidos.herokuapp.com/login">
                 <div>
                     <h4>CPF:{{cliente.cpf}}</h4>
                     <h4>Email:{{cliente.email}}</h4>

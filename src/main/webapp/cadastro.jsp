@@ -71,7 +71,7 @@
             <h3> {{mensagemCliente}} </h3>
 <!--            <h2 >Bem Vindo ${pageContext.request.userPrincipal.name}</h2>-->
             <br>
-            <form action="login">
+            <form action="http://interfaceusuariospedidos.herokuapp.com/login">
                 <button class="booknow wow fadeInUp" type="submit">Voltar para Login</button>
             </form>
         </div>
