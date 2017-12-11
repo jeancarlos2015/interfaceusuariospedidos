@@ -45,7 +45,7 @@
                     <ul id="navigations">
                         <li><a href="index">PRINCIPAL</a></li>
                         <li> <a href="login">ACESSO</a></li>
-                        <li><a href="produtos">PRODUTOS</a></li>]
+                        <li><a href="produtos">PRODUTOS</a></li>
                         <li><a href="https://interfacegerentefornecedor.herokuapp.com">FUNCIONÁRIOS</a></li>
                         <c:if test="${pageContext.request.userPrincipal.name != null}">
                             <li><a href="http://interfaceusuariospedidos.herokuapp.com/conta.jsp">Conta</a></li>
