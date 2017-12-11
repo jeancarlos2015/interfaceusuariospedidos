@@ -56,7 +56,7 @@ public class UserController {
         }
 
         if (logout != null) {
-            model.addAttribute("message", "teste");
+            model.addAttribute("message", "");
         }
         return "login";
     }
