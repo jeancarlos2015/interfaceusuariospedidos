@@ -29,8 +29,10 @@ angular.module('appProduto', [])
                 pedido.idcliente = cliente.idcliente;
                 pedido.descricao = produto.descricao;
                 pedido.cpf = cliente.cpf;
-                $http.post('https://servicocontrolepedidos.herokuapp.com/pedido', pedido).
+                if(pedido.status==="Novo"){
+                    $http.post('https://servicocontrolepedidos.herokuapp.com/pedido', pedido).
                         then(function (response) {
+                            
                             if (response.data) {
                                 $scope.mensagemPedido = "Pedido cadastrado com sucesso!!!";
                                 $scope.pedidos.push(pedido);
@@ -38,6 +40,10 @@ angular.module('appProduto', [])
                                 $scope.mensagemPedido = "Pedido não foi cadastrado!!!";
                             }
                         });
+                }else{
+                    $scope.mensagemPedido = "O pedido não pode ser cancelado!!!";
+                }
+                
             };
 
 
