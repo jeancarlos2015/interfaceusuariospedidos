@@ -56,7 +56,7 @@
     <body>
 
         <c:if test="${pageContext.request.userPrincipal.name != null}">
-            <h2 >Bem Vindo {{cliente.nome}}</h2>
+            <h2 >Bem Vindo Cliente {{cliente.nome}}</h2>
             <form id="logoutForm" method="POST" action="${contextPath}/logout">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
