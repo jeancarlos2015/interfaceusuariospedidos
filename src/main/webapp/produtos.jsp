@@ -36,7 +36,7 @@
                         <li><a href="index">PRINCIPAL</a></li>
                         <li> <a href="login">ACESSO RESTRITO</a></li>
                         <li><a href="produtos">PRODUTOS</a></li>
-                        <li><a href="http://interfacegerentefornecedor.herokuapp.com">FUNCIONÁRIO</a></li>
+                        <li><a href="https://interfacegerentefornecedor.herokuapp.com/login">FUNCIONÁRIOS</a></li>
                     </ul>
                 </nav>
             </div> <!--end of header-->
