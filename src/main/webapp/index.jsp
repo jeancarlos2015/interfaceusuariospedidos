@@ -48,7 +48,7 @@
                         <li><a href="produtos">PRODUTOS</a></li>
                         <li><a href="https://interfacegerentefornecedor.herokuapp.com/login">FUNCIONÁRIOS</a></li>
                         <c:if test="${pageContext.request.userPrincipal.name != null}">
-                            <li><a href="http://interfaceusuariospedidos.herokuapp.com/conta.jsp">Conta</a></li>
+                            <li><a href="http://interfaceusuariospedidos.herokuapp.com/conta.jsp">MINHA CONTA</a></li>
                         </c:if>
                     </ul>
                 </nav>

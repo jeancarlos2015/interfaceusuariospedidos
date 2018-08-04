@@ -3,18 +3,8 @@ dist: trusty
 sudo: false
 jdk:
   - oraclejdk8
-#before_install:
-#- chmod +x mvnw
-
-addons:
-  sonarcloud:
-    organization: "usuariospedidos1"
-    token:
-      secure: "$SONAR_KEY"
-script:
-  - sonar-scanner
 deploy:
  provider: heroku
  api-key:
-  secure: $HEROKU_KEY
+  secure: $API_KEY
  app: interfaceusuariospedidos
