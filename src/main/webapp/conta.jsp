@@ -107,7 +107,7 @@
                                                 <img src="resources/{{produto.imageStr}}"  class="circle float-left profile-photo" width="200" height="auto">
                                                 <div class="ml-1 direita">
                                                     <p class="m-0"><strong>{{produto.nome}}</strong> <span class="text-muted">{{produto.descricao}}</span></p>
-                                                    <p class="text-small text-muted">Pre�o:{{produto.preco}},00</p>
+                                                    <p class="text-small text-muted">PREÇO:{{produto.preco}},00</p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <hr class="m-0 mb-2" />
