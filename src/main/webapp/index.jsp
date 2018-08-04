@@ -150,48 +150,48 @@
         <!--============ FOOTER ============-->
 
 
-        <div class="footerwrapper">
-            <footer class="container">
-                <div class="socialize">
+        <%--<div class="footerwrapper">--%>
+            <%--<footer class="container">--%>
+                <%--<div class="socialize">--%>
 
-                    <h2>Redes Sociais</h2>
-                    <div class="socialimgs">
-                        <a href="https://www.facebook.com/Mido.HHH"><img src="resources/images/fb.png" width="68" height="68" class="facebook"
-                                                                         alt="fb"></a>
-                        <a href="https://twitter.com/Mido_A7X"><img src="resources/images/twitter.png" width="68" height="68" class="twitter"
-                                                                    alt="twitter"></a>
-                        <a href="#"><img src="resources/images/youtube.png" width="68" height="69" class="youtube" alt="youtube"></a>
-                        <a href="#"><img src="resources/images/g+.png" width="68" height="68" class="google" alt="g+"></a>
-                        <a href="#"><img src="resources/images/message.png" width="68" height="68" class="message" alt="message"></a>
-                    </div> <!--end of social imgs-->
+                    <%--<h2>Redes Sociais</h2>--%>
+                    <%--<div class="socialimgs">--%>
+                        <%--<a href="https://www.facebook.com/Mido.HHH"><img src="resources/images/fb.png" width="68" height="68" class="facebook"--%>
+                                                                         <%--alt="fb"></a>--%>
+                        <%--<a href="https://twitter.com/Mido_A7X"><img src="resources/images/twitter.png" width="68" height="68" class="twitter"--%>
+                                                                    <%--alt="twitter"></a>--%>
+                        <%--<a href="#"><img src="resources/images/youtube.png" width="68" height="69" class="youtube" alt="youtube"></a>--%>
+                        <%--<a href="#"><img src="resources/images/g+.png" width="68" height="68" class="google" alt="g+"></a>--%>
+                        <%--<a href="#"><img src="resources/images/message.png" width="68" height="68" class="message" alt="message"></a>--%>
+                    <%--</div> <!--end of social imgs-->--%>
 
-                </div>
+                <%--</div>--%>
 
-<!--
-                <div class="sendfeedback">
-                    <h2>Gostou da comida?</h2>
-                    <form>
-                        <h6>Seu Nome:</h6>
-                        <input type="text" class="yourname" >
-                        <h6>Telefone :</h6>
-                        <input type="text" class="mobilenumber">
-                        <h6>Sugestão :</h6>
-                        <textarea></textarea>
+<%--<!----%>
+                <%--<div class="sendfeedback">--%>
+                    <%--<h2>Gostou da comida?</h2>--%>
+                    <%--<form>--%>
+                        <%--<h6>Seu Nome:</h6>--%>
+                        <%--<input type="text" class="yourname" >--%>
+                        <%--<h6>Telefone :</h6>--%>
+                        <%--<input type="text" class="mobilenumber">--%>
+                        <%--<h6>Sugestão :</h6>--%>
+                        <%--<textarea></textarea>--%>
 
-                        <button>Enviar </button>
-
-
-
-                    </form>
-
-                </div>  end of feedback
--->
+                        <%--<button>Enviar </button>--%>
 
 
 
-            </footer> <!-- end of footer-->
+                    <%--</form>--%>
 
-        </div> <!-- end of footer-->
+                <%--</div>  end of feedback--%>
+<%---->--%>
+
+
+
+            <%--</footer> <!-- end of footer-->--%>
+
+        <%--</div> <!-- end of footer-->--%>
 
 
 
