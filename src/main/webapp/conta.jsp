@@ -69,7 +69,7 @@
                 <div>
                     <h4>CPF:{{cliente.cpf}}</h4>
                     <h4>Email:{{cliente.email}}</h4>
-                    <h4>Endereï¿½o:{{cliente.endereco}}</h4>
+                    <h4>Endereço:{{cliente.endereco}}</h4>
                     <h4>Telefone:{{cliente.telefone}}</h4> 
                     <br>
                     <input type="button" value="Logout" onclick="document.forms['logoutForm'].submit()" />
@@ -107,7 +107,7 @@
                                                 <img src="resources/{{produto.imageStr}}"  class="circle float-left profile-photo" width="200" height="auto">
                                                 <div class="ml-1 direita">
                                                     <p class="m-0"><strong>{{produto.nome}}</strong> <span class="text-muted">{{produto.descricao}}</span></p>
-                                                    <p class="text-small text-muted">PREÃ‡O:{{produto.preco}},00</p>
+                                                    <p class="text-small text-muted">PREÇO:{{produto.preco}},00</p>
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <hr class="m-0 mb-2" />
@@ -137,8 +137,8 @@
                                             <div class="mt-1">                                                
                                                 <div class="float-left ml-1">
                                                     <h4>ID DO PEDIDO: {{ped.idpedido}}</h4>
-                                                    <h4 class="m-0">DESCRIÃ‡ÃƒO :<span class="text-muted">{{ped.descricao}}</span></h4>
-                                                    <h4 class="text-small text-muted">PREÃ‡O: {{ped.precototal}},00</h4>
+                                                    <h4 class="m-0">DESCRIÇÃO :<span class="text-muted">{{ped.descricao}}</span></h4>
+                                                    <h4 class="text-small text-muted">PREÇO TOTAL: {{ped.precototal}},00</h4>
                                                     <h4 class="text-small text-muted">STATUS: {{ped.status}}</h4>
                                                 </div>
                                                 <div class="clearfix">
