@@ -156,7 +156,7 @@
 
                     <%--<h2>Redes Sociais</h2>--%>
                     <%--<div class="socialimgs">--%>
-                        <%--<a href="https://www.facebook.com/Mido.HHH"><img src="resources/images/fb.png" width="68" height="68" class="facebook"--%>
+                        <%--<a href="https://www.facebook.com/jean412><img src="resources/images/fb.png" width="68" height="68" class="facebook"--%>
                                                                          <%--alt="fb"></a>--%>
                         <%--<a href="https://twitter.com/Mido_A7X"><img src="resources/images/twitter.png" width="68" height="68" class="twitter"--%>
                                                                     <%--alt="twitter"></a>--%>
@@ -202,7 +202,7 @@
         <div class="copyrightswrapper">
             <div id="copyrights" class="container">
 
-                <p>Copyright 2014 <a href="https://www.facebook.com/Mido.HHH"> Jean Carlos Penas </a> All Rights Reserved</p>
+                <p>Copyright 2014 <a href="https://www.facebook.com/jean412> Jean Carlos Penas </a> All Rights Reserved</p>
 
             </div> <!-- end of copyrights-->
         </div> <!-- end of website-->
@@ -211,8 +211,8 @@
 
 
         <div class="fixedsocial">
-            <a href="https://www.facebook.com/Mido.HHH"><img src="resources/images/facebook.png" width="20" height="20" alt="fb"> </a>
-            <a href="https://www.behance.net/Mido_HHH"><img src="resources/images/behance.png" width="20" height="20" alt="behance"> </a>
+            <a href="https://www.facebook.com/jean412"><img src="resources/images/facebook.png" width="20" height="20" alt="fb"> </a>
+            <a href="https://www.facebook.com/jean412"><img src="resources/images/behance.png" width="20" height="20" alt="behance"> </a>
 
 
 

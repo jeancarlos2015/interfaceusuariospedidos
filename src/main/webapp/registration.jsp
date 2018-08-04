@@ -37,7 +37,7 @@
                         <li><a href="index">PRINCIPAL</a></li>
                         <li> <a href="login">ACESSO</a></li>
                         <li><a href="produtos">PRODUTOS</a></li>
-                        <li><a href="https://interfacegerentefornecedor.herokuapp.com/login">FUNCION¡RIOS</a></li>
+                        <li><a href="https://interfacegerentefornecedor.herokuapp.com/login">FUNCION√ÅRIOS</a></li>
                     </ul>
                 </nav>  
             </div> <!--end of header-->
@@ -54,7 +54,7 @@
 
                 <spring:bind path="username">
                     <div class="form-group ${status.error ? 'has-error' : ''} alinha">
-                        <form:input type="text" path="username" class="form-control name" placeholder="CPF S” NUMEROS" required="" name="numbers" pattern="[0-9]+$"
+                        <form:input type="text" path="username" class="form-control name" placeholder="CPF SÔøΩ NUMEROS" required="" name="numbers" pattern="[0-9]+$"
                                     autofocus="true"></form:input>
                         <form:errors path="username"></form:errors>
                         </div>
