@@ -37,7 +37,7 @@
                         <li><a href="index">PRINCIPAL</a></li>
                         <li> <a href="login">ACESSO</a></li>
                         <li> <a href="produtos">PRODUTOS</a></li>
-                        <li><a href="https://interfacegerentefornecedor.herokuapp.com/login">FUNCION�RIOS</a></li>
+                        <li><a href="https://interfacegerentefornecedor.herokuapp.com/login">FUNCIONÁRIOS</a></li>
                     </ul>
                 </nav>
             </div> <!--end of header-->
